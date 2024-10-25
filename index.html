@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Privacy Visualizer</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link href="index.css" rel="stylesheet" />
+        <script src="index.js" defer></script>
+    </head>
+    <body data-bs-theme="dark">
+        <!-- Main Content -->
+        <div id="main-content" class="container mx-auto">
+            <h1 class="display-4 text-center fw-bold">Privacy Visualizer</h1>
+            <h2 class="h6">
+                A tool to help you visualize privacy policies. Learn more about each category by
+                clicking its name.
+                <a href="https://rejectconvenience.com/Why-Privacy/"
+                    >Click here to learn why I made this visualizer.</a
+                >
+            </h2>
+            <div class="container-fluid d-flex flex-column px-0">
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/health.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#healthModal"
+                            >
+                                Health
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/purchases.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#purchasesModal"
+                            >
+                                Pruchases
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/financial.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#financialModal"
+                            >
+                                Financial
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/location.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#locationModal"
+                            >
+                                Location
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/contact_info.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#contactInfoModal"
+                            >
+                                Contanct Info
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/contacts.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#contactsModal"
+                            >
+                                Contacts
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/user_content.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#userContentModal"
+                            >
+                                User Content
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/search.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#searchModal"
+                            >
+                                Search
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/browsing.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#browsingModal"
+                            >
+                                Browsing
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/identifiers.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#identifiersModal"
+                            >
+                                Identifiers
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/usage_data.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#usageDataModal"
+                            >
+                                Usage Data
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/sensitive_info.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#sensitiveInfoModal"
+                            >
+                                Sensitive Info
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-center">
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/diagnostics.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#diagnosticsModal"
+                            >
+                                Diagnostics
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="category m-1 m-md-3 card">
+                        <div
+                            type="button"
+                            title="Change Importance"
+                            class="card-img-top d-flex justify-content-center"
+                        >
+                            <img class="w-100" src="images/other_data.png" />
+                        </div>
+                        <div class="card-body">
+                            <p
+                                title="Learn More"
+                                type="button"
+                                class="card-title m-0 text-center"
+                                data-bs-toggle="modal"
+                                data-bs-target="#otherDataModal"
+                            >
+                                Other Data
+                                <i class="bi bi-info-square-fill"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modals -->
+        <div
+            class="modal fade"
+            id="healthModal"
+            tabindex="-1"
+            aria-labelledby="healthModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="healthModallabel">Health</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Health and medical data, which includes data from any user provided
+                            health or medical data. This also contains fitness and exercise data,
+                            including the Motion and Fitness API. This includes things like your
+                            device’s accelerometers, gyroscopes, pedometer, magnetometer, and
+                            barometer. This can be collected for user interactions, fitness
+                            tracking, health-related matters, and more. For example, a game might
+                            use accelerometer and gyroscope input to control on screen game
+                            behavior, which technically falls under this health category as motion
+                            data.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Having a music playlist go along with a workout. Having a third-party
+                            health tracking app track steps (like Garmin, Pokemon Go). This data
+                            normally requires permission to be collected, but please ensure it is
+                            optional within the privacy policy.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            While not normally sold, data that is collected could be used against
+                            you in insurance-related schemes, as we have seen before.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            accelerometers, active minutes, activity tracking, Apple HealthKit,
+                            barometer, calories, device sensor data, fitness, food, Google Fit,
+                            gyroscopes, health, heart rate, magnetometer, motion, pedometer, sleep,
+                            steps, walk, water, weight
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="purchasesModal"
+            tabindex="-1"
+            aria-labelledby="purchasesModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="purchasesModallabel">Purchases</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            An account’s or individual’s purchases or purchase tendencies. This data
+                            is commonly used to identify patterns and trends in your spending
+                            behavior, which is normally used for advertising purposes, whether from
+                            the service you are shopping with, or with third parties.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Buying an item or series of items consistently can lead to you getting
+                            coupons for similar items. Another way of putting it is advertising
+                            accuracy.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            You may get hyper-specific ads that seem to “read your mind,” but are
+                            ultimately based on complex algorithms that track patterns in your
+                            spending behavior. The consequence is also its benefit, advertising
+                            accuracy.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>purchases, shopping, spending</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="financialModal"
+            tabindex="-1"
+            aria-labelledby="financialModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="financialModallabel">Financial</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Payment information, such as form of payment, payment card number, or
+                            bank account number. If an app uses a payment service (like Stripe,
+                            Shopify, or Paypal), and is not collected, it does not need to be
+                            disclosed in a privacy policy. You should read the privacy policy of
+                            whatever payment service a given app or website is using to understand
+                            how they collect and protect your data as well. This category can also
+                            contain your credit score, salary, income, assets, debts, or any other
+                            financial information.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Online shopping service remembering your card information, or a
+                            subscription service that is billed every month. When a company is
+                            collecting credit information, they can use this to help track your
+                            credit score and give you recommendations based on that.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            Stolen credit card information, phishing attacks, or identity theft.
+                            This is one of the most sought-after types of data in a data breach, and
+                            is certainly the most lucrative when it is stolen. This type of data
+                            collection can lead to a lot of stress that is out of your control once
+                            it is breached.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            assets, bank account, card number, credit score, debts, income, payment,
+                            payment service, salary
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="locationModal"
+            tabindex="-1"
+            aria-labelledby="locationModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="locationModallabel">Location</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            This can be precise location, which is information that describes the
+                            location of you or your device with the same or greater resolution as
+                            latitude and longitude with three or more decimal places. Coarse
+                            location is the location of you or your device with lower resolution
+                            than a latitude and longitude with three or more decimal places, such as
+                            Approximate Location Services. For additional context, here is the scale
+                            of these decimal places:
+                        </p>
+                        <p><strong>Coarse Location:</strong></p>
+                        <p>
+                            1st decimal: ~ 6.9 mi (11.1km); A city
+                            <br />
+                            2nd decimal: ~ 0.5 mi (1.1km); A neighborhood
+                        </p>
+                        <p><strong>Precise Location:</strong></p>
+                        <p>
+                            3rd decimal: ~ 360 ft (110m); A building
+                            <br />
+                            4th decimal: ~ 36 ft (11m): A tennis court
+                            <br />
+                            5th decimal: ~ 3 ft (1.1m); A guitar
+                            <br />
+                            6th decimal: ~ 4 in (11cm): A deck of cards
+                            <br />
+                            7th decimal: ~ 0.5 in (1.1cm): The thickness of one AAA battery. This is
+                            how accurate iPhones are when tracking devices like AirTags.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Finding your lost AirPods, using GPS while traveling, playing
+                            location-based games like Pokemon Go.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            You can be tracked down to the inch due to the volume of Apple devices
+                            in most populated areas of the USA. While precise data isn't commonly
+                            stored for long periods of time, it can be, and can be shared with data
+                            brokers, law enforcement, and potential bad actors.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            approximate, bluetooth, coarse, GPS, IP address, location, precise,
+                            ultra wideband
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="contactInfoModal"
+            tabindex="-1"
+            aria-labelledby="contactInfoModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactInfoModallabel">Contact Info</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Information such as first or last name, email address, phone number,
+                            home address, physical address, mailing address, or any other
+                            information that can be used to contact you outside an app or website.
+                            This information is considered directly identifiable.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Getting items shipped to you that you ordered using online shopping, a
+                            delivery driver contacting you in regards to a food delivery, a
+                            newsletter sent via email.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            This is the number one source that scammers use to send you spam calls,
+                            texts, and emails.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>name, address, email, phone number, text</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="contactsModal"
+            tabindex="-1"
+            aria-labelledby="contactsModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactsModallabel">Contacts</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            A list of contacts in your phone, address book, or social graph. This
+                            would be directly identifiable information for your contacts.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>Finding friends who use the same service.</p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            You are giving out direct identifying information about your friends and
+                            family without their consent. This option has the same consequences as
+                            contact info for yourself, but it's for all your contacts instead. This
+                            allows scammers to send your friends and family spam calls, texts, and
+                            emails.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>address book, contacts, friends list</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="userContentModal"
+            tabindex="-1"
+            aria-labelledby="userContentModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="userContentModallabel">User Content</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            This data contains anything created by you. This includes emails or text
+                            messages, including subject line, sender, recipients, and contents of
+                            the email or message; Photos or videos, audio data, such as your voice
+                            or sound recordings, gameplay content, or any content created during a
+                            customer support request. If an app or website offers private messaging
+                            between users, they have to discourse on the app store that it’s emails
+                            or text messages.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Direct messages with people in a chat app, photos being uploaded to a
+                            photo sharing platform, audio recordings being used for making music,
+                            working with customer support to resolve an issue.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            User content can be used to train AI, which in turn can be used in scams
+                            that use AI to mimic your likeness to trick families into sending a
+                            scammer money.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            audio, capture, chat, customer support, direct message, email, gameplay,
+                            photos, recordings, text, user content, videos, voice
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="searchModal"
+            tabindex="-1"
+            aria-labelledby="searchModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="searchModallabel">Search</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>Information about searches performed in the app or website.</p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Remembering what you searched for previously, updating a social feed
+                            based on search history. A shopping app using this data alongside
+                            purchase data to show you things that you’re more likely to buy based on
+                            your searches.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>Advertising accuracy is both a pro and con to search data.</p>
+                        <p class="h5">Search Terms:</p>
+                        <p>search, history</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="browsingModal"
+            tabindex="-1"
+            aria-labelledby="browsingModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="browsingModallabel">Browsing</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Information about content the user has viewed that is not part of the
+                            app, such as websites. This is mostly attributed to cookies, and other
+                            similar third-party tracking tools.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>Remembering who you are based on the third-party tracking tools.</p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            Access to track the sites and apps you use outside of the app or website
+                            you are on, which has been a notable privacy concern since 1996 since
+                            the cookie tool was more publicly known.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>cookies, browsing history, third party tracking, trackers</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="identifiersModal"
+            tabindex="-1"
+            aria-labelledby="identifiersModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="identifiersModallabel">Identifiers</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            This is data like your screen name, handle, account ID, assigned user
+                            ID, customer number, or other user- or account-level ID that can be used
+                            to identify a particular user or account. It can also be your device’s
+                            advertising identifier, or other device-level ID. This type of data is
+                            very common, and weirdly enough, might not be considered directly
+                            identifiable on its own, despite its name.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            Customized username on a social media platform. Better security for apps
+                            that are utilizing device-based authentication.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            If a username can be linked to you via other identifying information,
+                            like your name, that could have wider privacy consequences if you reuse
+                            that username across all services.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            account ID, advertising ID, customer number, device ID, handle, IMEI,
+                            MAC address, screen name, serial number, user name, UUID
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="usageDataModal"
+            tabindex="-1"
+            aria-labelledby="usageDataModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="usageDataModallabel">Usage Data</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Ways you interact with the app or website, like app launches, taps,
+                            clicks, scrolling information, music listening data, video views, saved
+                            place in a game, video, or song, or other information about how you
+                            interact with the app or website. This also contains advertising data,
+                            such as information about the advertisements you have seen or clicked.
+                            This data can be used to make suggestions based on your behaviors within
+                            the app.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            A video platform that uses an algorithm to make your feed feel more
+                            personalized based on how you use the platform.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            Making the app very addictive, since they understand how and when you
+                            interact with content within that app. This is what we’ve seen with
+                            Facebook and “ragebait” content for years now. Additionally, advertising
+                            accuracy is both a pro and con.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            advertising, analytics, clicked, engagement, interact, likes, usage
+                            data, user interaction, viewed, views
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="sensitiveInfoModal"
+            tabindex="-1"
+            aria-labelledby="sensitiveInfoModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="sensitiveInfoModallabel">
+                            Sensitive Info
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Racial or ethnic data, sexual orientation, pregnancy or childbirth
+                            information, disability, religious or philosophical beliefs, trade union
+                            membership, political opinion, genetic information, or biometric data.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            An online insurance service having access to your medical records, a
+                            telemed doctor's office.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            We have seen many data breaches after this kind of data, including the
+                            23&Me data breach in 2023, which contained genetic information, among
+                            others.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>
+                            belief, biometric, childbirth, disability, ethnic, genetic,
+                            philosophical, political, pregnancy, racial, religious, sensitive
+                            information, sexual orientation, union
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="diagnosticsModal"
+            tabindex="-1"
+            aria-labelledby="diagnosticsModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="diagnosticsModallabel">Diagnostics</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Data collected for the purposes of measuring technical diagnostics
+                            related to the app. Often used to track crash logs, launch time, hang
+                            rate, or energy use.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>
+                            If an app is acting up, this data is used by the developers to resolve
+                            those issues.
+                        </p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>
+                            This can contain a lot of detailed usage data, but is not commonly
+                            stored.
+                        </p>
+                        <p class="h5">Search Terms:</p>
+                        <p>crash logs, diagnostics, energy use, launch time</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modal fade"
+            id="otherDataModal"
+            tabindex="-1"
+            aria-labelledby="otherDataModallabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="otherDataModallabel">Other Data</h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="h5">Definition:</p>
+                        <p>
+                            Any other data types not mentioned, such as data captured from the LiDAR
+                            sensor on your phone.
+                        </p>
+                        <p class="h5 benefits">Potential benefits:</p>
+                        <p>Use your best judgment!</p>
+                        <p class="h5 consequences">Potential consequences:</p>
+                        <p>Use your best judgment!</p>
+                        <p class="h5">Search Terms:</p>
+                        <p>Other data</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
